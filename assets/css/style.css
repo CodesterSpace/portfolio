@@ -240,7 +240,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .slider {
-  --slider-items: 1;
+  --slider-items: 2;
   --item-gap: 12px;
 
   margin-block-start: 60px;
@@ -634,6 +634,16 @@ body.nav-active { overflow: hidden; }
 .portfolio-card:is(:hover, :focus-within) .card-content {
   transform: translate(-50%, -50%);
   opacity: 1;
+}
+
+.portfolio-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-details {
+  text-align: center;
 }
 
 

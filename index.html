@@ -13,6 +13,20 @@
   <meta name="title" content="Ibrahima Diallo | Développeur Web & Mobile">
   <meta name="description" content=" Portfolio - Ibrahima Diallo | Développeur Web & Mobile">
 
+  <!-- Open Graph (OG) Meta Tags pour Facebook et autres réseaux sociaux -->
+  <meta property="og:title" content="Ibrahima Diallo | Développeur Web & Mobile">
+  <meta property="og:description" content="Portfolio - Ibrahima Diallo | Développeur Web & Mobile">
+  <meta property="og:image" content="/assets/images/hero2.jpeg"> <!-- Remplacez par l'URL de votre image -->
+  <meta property="og:url" content="https://www.votreportfolio.com"> <!-- L'URL de la page que vous partagez -->
+  <meta property="og:type" content="website">
+
+  <!-- Meta pour Twitter Cards -->
+  <meta name="twitter:title" content="Ibrahima Diallo | Développeur Web & Mobile">
+  <meta name="twitter:description" content="Portfolio - Ibrahima Diallo | Développeur Web & Mobile">
+  <meta name="twitter:image" content="/assets/images/hero2.jpeg"> <!-- Remplacez par l'URL de votre image -->
+  <meta name="twitter:card" content="summary_large_image">
+
+
   <!-- 
     - favicon
   -->
@@ -71,19 +85,19 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#" class="navbar-link">Accueil</a>
+            <a data-nav-toggler href="#" class="navbar-link">Accueil</a>
           </li>
 
           <li>
-            <a href="#services" class="navbar-link">Services</a>
+            <a data-nav-toggler href="#services" class="navbar-link">Services</a>
           </li>
 
           <li>
-            <a href="#competences" class="navbar-link">Compétences</a>
+            <a data-nav-toggler href="#competences" class="navbar-link">Compétences</a>
           </li>
           
           <li>
-            <a href="#portfolio" class="navbar-link">Portfolio</a>
+            <a data-nav-toggler href="#portfolio" class="navbar-link">Portfolio</a>
           </li>
 
           <!-- <li>
@@ -91,7 +105,7 @@
           </li> -->
 
           <li>
-            <a href="#contact" class="navbar-link">Contact</a>
+            <a data-nav-toggler href="#contact" class="navbar-link">Contact</a>
           </li>
 
         </ul>
@@ -439,18 +453,7 @@
       -->
 
       <section id="portfolio" class="portfolio" aria-labelledby="portfolio-label">
-        <style>
-          .sans-contenu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh; /* ou une autre hauteur spécifique si nécessaire */
-          }
-          
-          .details {
-            text-align: center;
-          }
-        </style>
+
         <div class="title-wrapper container">
 
           <div>
@@ -464,114 +467,108 @@
           </p>
 
         </div>
+        <!-- <style>
+          .sans-contenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+          }
+          
+          .details {
+            text-align: center;
+          }
+        </style>
         <div class="sans-contenu">
           <div class="details">
             <p>Ce contenu sera ajouté d'ici 3 jours. Merci de patienter !</p>
           </div>
-        </div>
-        <!-- <div class="slider" data-slider>
+        </div> -->
+        <div class="slider" data-slider>
 
           <ul class="slider-container" data-slider-container>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
 
-                <img src="./assets/images/portfolio-1.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
+                <img src="./assets/images/portfolio-1.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                <a href="#" class="layer-link"></a>
+                
+              </div>
+              <div class="portfolio-card-content">
+                <div class="portfolio-details">
                   <h3 class="h3 card-title">Lab. 001</h3>
 
                   <p class="card-text">Website Design</p>
                 </div>
-
-                <a href="#" class="layer-link"></a>
-
               </div>
             </li>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-2.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Aer Agency</h3>
-
-                  <p class="card-text">Website / Development</p>
-                </div>
-
+                <img src="./assets/images/portfolio-2.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
                 <a href="#" class="layer-link"></a>
-
+              </div>
+              <div class="portfolio-contenu">
+                <div class="portfolio-details">
+                <h3 class="h3 card-title">Lab. 001</h3>
+                <p class="card-text">Website / Development</p>
               </div>
             </li>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-3.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Joker Card</h3>
-
-                  <p class="card-text">UX Design / Web App</p>
-                </div>
-
+                <img src="./assets/images/portfolio-3.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
                 <a href="#" class="layer-link"></a>
+              </div>
+              <div class="portfolio-card-content">
+                <div class="portfolio-details">
+                  <h3 class="h3 card-title">Lab. 001</h3>
 
+                  <p class="card-text">Website Design</p>
+                </div>
               </div>
             </li>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-4.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Peaky Blinders</h3>
-
-                  <p class="card-text">Website / UX Design</p>
-                </div>
-
+                <img src="./assets/images/portfolio-4.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
                 <a href="#" class="layer-link"></a>
+              </div>
+              <div class="portfolio-card-content">
+                <div class="portfolio-details">
+                  <h3 class="h3 card-title">Lab. 001</h3>
 
+                  <p class="card-text">Website Design</p>
+                </div>
               </div>
             </li>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-5.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Design Zoom</h3>
-
-                  <p class="card-text">Branding / Design</p>
-                </div>
-
+                <img src="./assets/images/portfolio-5.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
                 <a href="#" class="layer-link"></a>
+              </div>
+              <div class="portfolio-card-content">
+                <div class="portfolio-details">
+                  <h3 class="h3 card-title">Lab. 001</h3>
 
+                  <p class="card-text">Website Design</p>
+                </div>
               </div>
             </li>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="./assets/images/portfolio-6.jpg" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Out Zone</h3>
-
-                  <p class="card-text">UX Design / Web App</p>
-                </div>
-
+                <img src="./assets/images/portfolio-6.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
                 <a href="#" class="layer-link"></a>
+              </div>
+              <div class="portfolio-card-content">
+                <div class="portfolio-details">
+                  <h3 class="h3 card-title">Lab. 001</h3>
 
+                  <p class="card-text">Website Design</p>
+                </div>
               </div>
             </li>
 
@@ -589,7 +586,7 @@
             </button>
           </div>
 
-        </div>-->
+        </div>
         <br> 
 
       </section>

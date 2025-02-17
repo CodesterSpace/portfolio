@@ -38,10 +38,20 @@ const navbar = document.querySelector("[data-navbar]");
 const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  navToggleBtn.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
+  if (!navbar.classList.contains("active")) {
+    // Si la classe "active" n'est pas présente, on l'ajoute
+    navbar.classList.add("active");
+    navToggleBtn.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("nav-active");
+  } else {
+    // Si la classe "active" est déjà présente, on la supprime
+    navbar.classList.remove("active");
+    navToggleBtn.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("nav-active");
+  }
+
 }
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
