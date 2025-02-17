@@ -71,27 +71,27 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#" class="navbar-link">Home</a>
+            <a href="#" class="navbar-link">Accueil</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Resume</a>
+            <a href="#services" class="navbar-link">Services</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Services</a>
+            <a href="#competence" class="navbar-link">Compétences</a>
+          </li>
+          
+          <li>
+            <a href="#portfolio" class="navbar-link">Portfolio</a>
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">Portfolio</a>
-          </li>
-
-          <li>
+          <!-- <li>
             <a href="#" class="navbar-link">Blog</a>
-          </li>
+          </li> -->
 
           <li>
-            <a href="#" class="navbar-link">Contact</a>
+            <a href="#contact" class="navbar-link">Contact</a>
           </li>
 
         </ul>
@@ -152,7 +152,7 @@
         - #SERVICE
       -->
 
-      <section class="service" aria-labelledby="service-label">
+      <section id="services" class="service" aria-labelledby="service-label">
         <div class="container">
 
           <div class="title-wrapper">
@@ -346,7 +346,7 @@
         - #SKILLS
       -->
 
-      <section class="section skills" aria-label="our skills">
+      <section id="competences" class="section skills" aria-label="our skills">
         <div class="container">
 
           <p class="section-subtitle">Compétences</p>
@@ -438,9 +438,25 @@
         - #PORTFOLIO
       -->
 
-      <section class="portfolio" aria-labelledby="portfolio-label">
-
-        <div class="title-wrapper container">
+      <section id="portfolio" class="portfolio" aria-labelledby="portfolio-label">
+        <style>
+          .sans-contenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* ou une autre hauteur spécifique si nécessaire */
+          }
+          
+          .details {
+            text-align: center;
+          }
+        </style>
+        <div class="sans-contenu">
+          <div class="details">
+            <p>Ce contenu sera ajouté d'ici 3 jours. Merci de patienter !</p>
+          </div>
+        </div>
+        <!--<div class="title-wrapper container">
 
           <div>
             <p class="section-subtitle" id="portfolio-label">Our Works</p>
@@ -574,7 +590,7 @@
             </button>
           </div>
 
-        </div><br>
+        </div><br> -->
 
       </section>
 
