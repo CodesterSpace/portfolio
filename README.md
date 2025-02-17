@@ -1,19 +1,19 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/pfolio)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/pfolio?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/pfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/P-Auxj7aNfQ?style=social)](https://youtu.be/P-Auxj7aNfQ)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/codesterspace/porfolio)
+  ![GitHub stars](https://img.shields.io/github/stars/codesterspace/pfolio?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/codesterspace/pfolio?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/codesterspace?style=social)](https://twitter.com/intent/follow?screen_name=codesterspace)
+  [![YouTube Video Views](https://img.shields.io/youtube/views/P-Auxj7aNfQ?style=social)](https://youtu.be/)
 
   <br />
   <br />
 
-  <h2 align="center">Personal Portfolio Website</h2>
+  <h2 align="center"> Portfolio</h2>
 
-  A fully responsive personal portfolio website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
+ Site web portfolio personnel responsive  , <br />Responsive pour tout appareils, crée en utilisant du HTML, CSS, et JavaScript.
 
-  <a href="https://codewithsadee.github.io/pfolio/"><strong>➥ Live Demo</strong></a>
+  <a href="https://codesterspace.github.io/portfolio/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
@@ -23,11 +23,11 @@
 
 ![Pfolio Desktop Demo](./readme-images/desktop.png "Desktop Demo")
 
-### Prerequisites
+### Prerequis
 
-Before you begin, ensure you have met the following requirements:
+Avant de commencer, verifier que vous avez tout les prerequis:
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+* [Git](https://git-scm.com/downloads "Download Git") doit etre installer dans ton systeme.
 
 ### Run Locally
 
@@ -36,18 +36,18 @@ To run **Pfolio** locally, run this command on your git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/pfolio.git
+sudo git clone https://github.com/codesterspace/portfolio.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/pfolio.git
+git clone https://github.com/codesterspace/portfolio.git
 ```
 
 ### Contact
 
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codesterspace).
 
 ### License
 
