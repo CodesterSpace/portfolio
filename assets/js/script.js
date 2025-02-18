@@ -28,6 +28,19 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 /**
+ * Bouton Telechargement
+ */
+
+const downloadButton = document.getElementById("cv");
+
+downloadButton.addEventListener("click", function() {
+    const link = document.createElement('a');
+    link.href = 'Ibrahima-diallo-cv.pdf';  // Chemin vers votre fichier PDF
+    link.download = 'Ibrahima-diallo-cv.pdf';  // Nom du fichier téléchargé
+    link.click();
+});
+
+/**
  * NAVBAR
  * navbar toggle for mobile
  */
