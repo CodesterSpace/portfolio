@@ -457,6 +457,28 @@ body.nav-active { overflow: hidden; }
 .overlay.active { display: block; }
 
 
+.defilement {
+    position: fixed;
+    bottom: 20px; /* Place en bas */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    background: rgba(156, 155, 155, 0.7); /* Fond semi-transparent */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.defilement p {
+    margin: 0 0 10px 0; /* Espace sous le texte */
+}
+
+.defilement-container {
+    display: flex; /* Aligner horizontalement les labels */
+    justify-content: center; /* Centrer les labels */
+    gap: 20px; /* Espacement entre les éléments */
+}
 
 
 
