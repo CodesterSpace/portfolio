@@ -74,7 +74,39 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+/**
+ * Defilement Auto
+ */
 
+let scrollInterval;
+let direction = 1; // 1 pour bas, -1 pour haut
+
+// Événement lorsque l'on active le défilement
+document.getElementById("scrollOn").addEventListener("change", function() {
+    if (this.checked) {
+      toggleNavbar(); // Simule un clic sur les togglers de la navbar
+
+        scrollInterval = setInterval(() => {
+            window.scrollBy(0, 5 * direction); // Définit la vitesse du défilement
+
+            // Vérifie si on atteint le bas
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                direction = -1; // Change de direction vers le haut
+            }
+
+            // Vérifie si on atteint le haut
+            if (window.scrollY <= 0) {
+                direction = 1; // Change de direction vers le bas
+            }
+        }, 20);
+    }
+});
+
+// Événement lorsque l'on désactive le défilement
+document.getElementById("scrollOff").addEventListener("change", function() {
+    clearInterval(scrollInterval);
+    toggleNavbar();
+});
 
 /**
  * HEADER
