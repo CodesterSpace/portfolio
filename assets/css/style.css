@@ -427,6 +427,7 @@ body.nav-active { overflow: hidden; }
   visibility: hidden;
   transition: 0.25s var(--cubic-in);
   z-index: 1;
+  overflow-y: auto; /* Permet le scroll vertical */
 }
 
 .navbar.active {
@@ -444,6 +445,10 @@ body.nav-active { overflow: hidden; }
 }
 
 .navbar-link:is(:hover, :focus-visible) { text-shadow: 1px 0 0 var(--eerie-black); }
+
+.navbar-list{
+  padding-bottom: 56px;
+}
 
 .overlay {
   position: absolute;
