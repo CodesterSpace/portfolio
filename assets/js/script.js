@@ -74,6 +74,20 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".navbar-link");
+
+  links.forEach(link => {
+    link.addEventListener("click", function () {
+      // Retirer la classe active de tous les liens
+      links.forEach(l => l.classList.remove("active"));
+      
+      // Ajouter la classe active au lien cliqué
+      this.classList.add("active");
+    });
+  });
+});
+
 /**
  * Defilement Auto
  */
@@ -90,13 +104,13 @@ document.getElementById("scrollOn").addEventListener("change", function() {
             window.scrollBy(0, 5 * direction); // Définit la vitesse du défilement
 
             // Vérifie si on atteint le bas
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                direction = -1; // Change de direction vers le haut
+            if ((window.innerHeight + document.documentElement.scrollTop) >= document.documentElement.offsetHeight) {
+              direction = -1;
             }
 
             // Vérifie si on atteint le haut
-            if (window.scrollY <= 0) {
-                direction = 1; // Change de direction vers le bas
+          if (document.documentElement.scrollTop <= 0) {
+              direction = 1;
             }
         }, 20);
     }
