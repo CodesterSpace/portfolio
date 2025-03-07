@@ -38,11 +38,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
   <!-- 
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/modal-style.css">
 
   <!-- 
     - preload images
@@ -160,11 +161,11 @@
               Mon objectif est de contribuer à des projets créatifs et innovants tout en continuant à évoluer dans ce domaine dynamique.
             </p>
 
-            <a id="cv" href="#" class="btn has-before">
+            <button id="cv" class="btn has-before">
               <span class="span">Telecharger CV</span>
 
               <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
-            </a>
+            </button>
 
           </div>
 
@@ -307,48 +308,9 @@
                 </div>
               </li>
 
-              <!--<li class="slider-item" data-slider-item>
-                <div class="service-card">
-
-                  <div class="card-icon">
-                    <ion-icon name="color-filter-outline"></ion-icon>
-                  </div>
-
-                  <h3 class="h3 card-title">Graphic Design</h3>
-
-                  <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
-                  </p>
-
-                  <span class="text-lg card-number">05</span>
-
-                  <a href="#" class="layer-link" aria-label="More about my Graphic Design service"></a>
-
-                </div>
-              </li>-->
-              <!--<li class="slider-item" data-slider-item>
-                <div class="service-card">
-
-                  <div class="card-icon">
-                    <ion-icon name="chatbubbles-outline"></ion-icon>
-                  </div>
-
-                  <h3 class="h3 card-title">Social Media</h3>
-
-                  <p class="card-text">
-                    Website ravida surna eveti semen the conse tusio anivite dianne one nivam acestion vue artin dictum.
-                  </p>
-
-                  <span class="text-lg card-number">06</span>
-
-                  <a href="#" class="layer-link" aria-label="More about my Social Media service"></a>
-
-                </div>
-              </li>-->
-
             </ul>
 
-            <div class="slider-controls">
+            <!-- <div class="slider-controls">
               <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
                 <div class="line"></div>
                 <div class="arrow"></div>
@@ -358,7 +320,7 @@
                 <div class="line"></div>
                 <div class="arrow"></div>
               </button>
-            </div>
+            </div> -->
 
           </div>
 
@@ -498,96 +460,185 @@
           </div>
         </div> -->
         <div class="slider" data-slider>
-
+          <!-- Modal Overlay for dimming background -->
+          <div class="modal-overlay" id="modal-overlay"></div>
           <ul class="slider-container" data-slider-container>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
                 <img src="./assets/images/portfolio-1.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                <a href="#" class="layer-link"></a>
-                
+                <a data-modal="modal1" href="#" class="layer-link"></a>
               </div>
               <div class="portfolio-card-content">
                 <div class="portfolio-details">
                   <h3 class="h3 card-title">Lab. 001</h3>
-
                   <p class="card-text">Website Design</p>
                 </div>
               </div>
+              <!-- Modal Content -->
+
+              <div class="modal__container" id="modal1">
+                <div class="modal__content">
+                  <div class="single-card">
+                    <div class="exit">
+                      <button class="close-btn" data-close="modal1">X</button>
+                    </div>
+                    <div class="img-area">
+                      <img src="./assets/images/portfolio-1.jpg" alt="">
+                    </div>
+                    
+                    <div class="info">
+                      <div class="partie">
+                        <div class="head-card">
+                          <h3 class="h3 card-title">Projet : Application Mobile de Résolution de Polynômes !</h3>
+                          <p>📅 Durée totale du projet : 8 semaines </p>
+                          <p>🎯 Objectif : Développer une application mobile sous Ionic Angular permettant de résoudre et de factoriser des polynômes en utilisant différentes méthodes.</p>                       
+                        </div>
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌 Phase 1 : Planification et Analyse (Semaine 1)</p>
+                        <ul class="modal-list left">
+                          <li>✅ Définition des objectifs et fonctionnalités</li>
+                          <li>✅ Étude des algorithmes (division euclidienne, méthode de Horner, identification des coefficients)</li>
+                          <li>✅ Choix des technologies : Ionic, Angular, TypeScript, MathJS</li>
+                          <li>✅ Élaboration du cahier des charges et maquettes (Figma)</li>
+                          Livrables : Cahier des charges détaillé, wireframes de l'application
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌 Phase 2 : Développement du Backend et Algorithmes (Semaines 2 à 4)</p>
+                        <ul class="modal-list right">
+                          <li>✅ Implémentation des algorithmes de résolution et factorisation</li>
+                          <li>✅ Tests unitaires des algorithmes avec Jasmine/Karma</li>
+                          <li>✅ Développement du service de gestion des polynômes en TypeScript</li>
+                          <li>✅ Création de l'API pour gérer les calculs</li>
+                          Livrables : Code des algorithmes, tests validés, documentation technique
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌 Phase 3 : Développement de l'Interface Utilisateur (Semaines 5 à 6)</p>
+                        <ul class="modal-list left">
+                          <li>✅ Mise en place du design avec Ionic et Angular Material</li>
+                          <li>✅ Intégration des fonctionnalités principales (saisie des polynômes, affichage des résultats)</li>
+                          <li>✅ Ajout des graphes interactifs avec Chart.js pour visualiser les courbes des polynômes</li>
+                          Livrables : Application fonctionnelle avec une interface complète
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌  Phase 4 : Tests, Optimisation et Déploiement (Semaines 7 à 8)</p>
+                        <ul class="modal-list right">
+                          <li>✅ Tests fonctionnels et correction des bugs</li>
+                          <li>✅ Optimisation des performances</li>
+                          <li>✅ Compilation et déploiement sur Android et iOS (Google Play et App Store)</li>
+                          Livrables : Version finale de l'application, documentation utilisateur
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <div class="footer-card">
+                          <h3 class="h3 card-title">🔍 Bilan du projet !</h3>
+                          <p>⏳ Durée totale : 8 semaines respectées </p>
+                          <p>📲 Résultat final : Une application mobile ergonomique et performante.</p>                       
+                          <p>🚀 Améliorations possibles : Ajouter un mode "étudiant" avec des explications interactives.</p>                       
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>          
             </li>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-2.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                <a href="#" class="layer-link"></a>
+                <a data-modal="modal2" href="#" class="layer-link"></a>
               </div>
               <div class="portfolio-contenu">
                 <div class="portfolio-details">
-                <h3 class="h3 card-title">Lab. 001</h3>
+                <h3 class="h3 card-title">Lab. 002</h3>
                 <p class="card-text">Website / Development</p>
               </div>
+              <!-- Modal Content -->
+
+              <div class="modal__container" id="modal2">
+                <div class="modal__content">
+                  <div class="single-card">
+                    <div class="exit">
+                      <button class="modal-button close-btn" data-close="modal2">X</button>
+                    </div>
+                    <div class="img-area">
+                      <img src="./assets/images/portfolio-2.jpg" alt="">
+                    </div>
+                    
+                    <div class="info">
+                      <h3>Projet Lab. 002 !</h3>
+                      <p>Bienvenue dans notre application de résolution et de factorisation de polynômes !  
+                        Ce projet, développé avec Ionic et Angular, permet de manipuler des polynômes en utilisant différentes méthodes :
+                      </p>
+                      <ul class="modal-list">
+                        <li>📌 Division Euclidienne</li>
+                        <li>📌 Méthode de Horner</li>
+                        <li>📌 Identification des coefficients</li>
+                      </ul>
+                      <p class="modal-p">
+                        L'application vise à aider les étudiants et les passionnés de mathématiques à comprendre et appliquer ces techniques de manière interactive.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>   
             </li>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
                 <img src="./assets/images/portfolio-3.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                <a href="#" class="layer-link"></a>
+                <a data-modal="modal3" href="#" class="layer-link"></a>
               </div>
               <div class="portfolio-card-content">
                 <div class="portfolio-details">
-                  <h3 class="h3 card-title">Lab. 001</h3>
-
+                  <h3 class="h3 card-title">Lab. 003</h3>
                   <p class="card-text">Website Design</p>
                 </div>
               </div>
-            </li>
+              <!-- Modal Content -->
 
-            <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-                <img src="./assets/images/portfolio-4.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                <a href="#" class="layer-link"></a>
-              </div>
-              <div class="portfolio-card-content">
-                <div class="portfolio-details">
-                  <h3 class="h3 card-title">Lab. 001</h3>
-
-                  <p class="card-text">Website Design</p>
+              <div class="modal__container" id="modal3">
+                <div class="modal__content">
+                  <div class="single-card">
+                    <div class="exit">
+                      <button class="modal-button close-btn" data-close="modal3">X</button>
+                    </div>
+                    <div class="img-area">
+                      <img src="./assets/images/portfolio-3.jpg" alt="">
+                    </div>
+                    
+                    <div class="info">
+                      <h3>Projet Lab. 003 !</h3>
+                      <p>Bienvenue dans notre application de résolution et de factorisation de polynômes !  
+                        Ce projet, développé avec Ionic et Angular, permet de manipuler des polynômes en utilisant différentes méthodes :
+                      </p>
+                      <ul class="modal-list">
+                        <li>📌 Division Euclidienne</li>
+                        <li>📌 Méthode de Horner</li>
+                        <li>📌 Identification des coefficients</li>
+                      </ul>
+                      <p class="modal-p">
+                        L'application vise à aider les étudiants et les passionnés de mathématiques à comprendre et appliquer ces techniques de manière interactive.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </li>
-
-            <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-                <img src="./assets/images/portfolio-5.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                <a href="#" class="layer-link"></a>
-              </div>
-              <div class="portfolio-card-content">
-                <div class="portfolio-details">
-                  <h3 class="h3 card-title">Lab. 001</h3>
-
-                  <p class="card-text">Website Design</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-                <img src="./assets/images/portfolio-6.jpg" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
-                <a href="#" class="layer-link"></a>
-              </div>
-              <div class="portfolio-card-content">
-                <div class="portfolio-details">
-                  <h3 class="h3 card-title">Lab. 001</h3>
-
-                  <p class="card-text">Website Design</p>
-                </div>
-              </div>
+              </div>   
             </li>
 
           </ul>
 
-          <div class="slider-controls">
+          <!-- <div class="slider-controls">
             <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
               <div class="line"></div>
               <div class="arrow"></div>
@@ -597,16 +648,12 @@
               <div class="line"></div>
               <div class="arrow"></div>
             </button>
-          </div>
+          </div> -->
 
         </div>
         <br> 
 
       </section>
-
-
-
-
 
       <!-- 
         - #BLOG
@@ -699,7 +746,12 @@
     </article>
   </main>
 
-
+  <!-- Back to top -->
+   <div class="back-to-top" data-top>
+      <a href="#" aria-label="Back to top">
+        <img src="assets/icons/ios-arrow-round-up.svg" width="50" height="50" alt="Back to top">
+      </a>
+    </div>
 
 
 
@@ -765,14 +817,11 @@
     </div>
   </footer>
 
-
-
-
-
   <!-- 
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/modal-script.js"></script>
 
   <!-- 
     - ionicon link

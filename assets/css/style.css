@@ -25,6 +25,7 @@
   --eerie-black: hsla(228, 9%, 10%, 1);
   --black: hsla(0, 0%, 0%, 1);
   --white: hsla(0, 0%, 100%, 1);
+  --white-top: rgb(212, 212, 212);
   --white_a10: hsla(0, 0%, 100%, 0.1);
   --white_a5: hsla(0, 0%, 100%, 0.05);
 
@@ -45,12 +46,15 @@
   
   --fw-800: 800;
   --fw-700: 700;
+  --fw-200: 200;
 
   /**
    * spacing
    */
 
   --section-padding: 100px;
+  --slider-items: 2; /* Afficher 2 éléments visibles */
+  --item-gap: 12px;
 
   /**
    * border radius
@@ -239,28 +243,38 @@ body.nav-active { overflow: hidden; }
   z-index: 1;
 }
 
+
 .slider {
-  --slider-items: 2;
+  --slider-items: 2; /* Afficher 2 éléments visibles */
   --item-gap: 12px;
 
   margin-block-start: 60px;
-  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .slider-container {
-  position: relative;
   display: flex;
+  flex-wrap: nowrap;
   gap: var(--item-gap);
-  transition: transform var(--cubic-ease-out);
+  width: 100%; /* Important : s'assurer qu'il prend bien la largeur du parent */
 }
 
 .slider-item {
   --total-gap: calc(var(--item-gap) * (var(--slider-items) - 1));
   --item-width: calc((100% / var(--slider-items)) - (var(--total-gap) / var(--slider-items)));
 
+  flex: 0 0 var(--item-width); /* Fixe la largeur */
   min-width: var(--item-width);
   width: var(--item-width);
+  scroll-snap-align: start;
+  margin-bottom: var(--item-gap);
 }
+
 
 .slider-control {
   position: relative;
@@ -492,10 +506,10 @@ body.nav-active { overflow: hidden; }
 
 .hero { padding-block-start: 130px; }
 
-.hero-title {
+/* .hero-title {
   text-transform: uppercase;
   word-break: break-all;
-}
+} */
 
 .hero-subtitle {
   font-size: var(--fs-8);
@@ -554,7 +568,7 @@ body.nav-active { overflow: hidden; }
   position: relative;
   background-color: var(--white);
   height: 100%;
-  padding: 60px 40px 40px;
+  padding: 30px 20px 20px;
   transition: var(--transition-2);
 }
 
@@ -566,14 +580,19 @@ body.nav-active { overflow: hidden; }
 
 .service-card .card-title {
   color: var(--content-color, var(--raisin-black));
+  margin: 0;
   margin-block: 20px;
+  font-size: 15px;
+  /* word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; */
 }
 
 .service-card .card-text { color: var(--content-color); }
 
 .service-card .card-number {
   margin-inline-start: auto;
-  font-weight: var(--fw-800);
+  font-weight: var(--fw-200);
   line-height: 0.6;
   max-width: max-content;
   margin-block-start: 32px;
@@ -628,7 +647,9 @@ body.nav-active { overflow: hidden; }
   #PORTFOLIO
 \*-----------------------------------*/
 
-.portfolio .slider { --item-gap: 16px; }
+.portfolio .slider {
+   --item-gap: 16px; 
+  }
 
 .portfolio-card {
   position: relative;
@@ -708,6 +729,38 @@ body.nav-active { overflow: hidden; }
 
 
 
+/*-----------------------------------*\
+  #Back to top
+\*-----------------------------------*/
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: var(--white-top);
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-circle);
+  place-items: center;
+  transition: var(--transition-1);
+  display: none;
+}
+
+.back-to-top a { 
+  display: block;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: var(--black);
+  transition: var(--transition-1);
+}
+
+.back-to-top.active {
+  display: block;
+}
+
 
 
 /*-----------------------------------*\
@@ -745,6 +798,21 @@ body.nav-active { overflow: hidden; }
 
 
 
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for smaller than 400px screen
+ */
+ @media (max-width: 400px) {
+  .card-title {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+ }
 
 /*-----------------------------------*\
   #MEDIA QUERIES
@@ -1019,7 +1087,7 @@ body.nav-active { overflow: hidden; }
 
   .hero-content { width: 55%; }
 
-  .hero-title { word-break: normal; }
+  /* .hero-title { word-break: normal; } */
 
   .hero .section-text { margin-block-end: 52px; }
 

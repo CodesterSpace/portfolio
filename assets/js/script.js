@@ -33,15 +33,16 @@ window.addEventListener("DOMContentLoaded", function () {
 
 const downloadButton = document.getElementById("cv");
 
-downloadButton.addEventListener("click", function() {
+downloadButton.addEventListener("click" , (event) => {
+    event.preventDefault();
     // Ouvre le fichier PDF dans un nouvel onglet
     window.open('Ibrahima-diallo-cv.pdf', '_blank');
 
     // Déclenche le téléchargement du fichier
-    const link = document.createElement('a');
-    link.href = 'Ibrahima-diallo-cv.pdf';  // Chemin vers votre fichier PDF
-    link.download = 'Ibrahima-diallo-cv.pdf';  // Nom du fichier téléchargé
-    link.click();
+    // const link = document.createElement('a');
+    // // link.href = 'Ibrahima-diallo-cv.pdf';  // Chemin vers votre fichier PDF
+    // // link.download = 'Ibrahima-diallo-cv.pdf';  // Nom du fichier téléchargé
+    // link.click();
 });
 
 
@@ -74,6 +75,7 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".navbar-link");
 
@@ -87,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 /**
  * Defilement Auto
@@ -103,15 +106,14 @@ document.getElementById("scrollOn").addEventListener("change", function() {
         scrollInterval = setInterval(() => {
             window.scrollBy(0, 5 * direction); // Définit la vitesse du défilement
 
-            // Vérifie si on atteint le bas
             if ((window.innerHeight + document.documentElement.scrollTop) >= document.documentElement.offsetHeight) {
               direction = -1;
-            }
-
-            // Vérifie si on atteint le haut
+          }
+          
           if (document.documentElement.scrollTop <= 0) {
               direction = 1;
-            }
+          }
+          
         }, 20);
     }
 });
@@ -130,10 +132,13 @@ document.getElementById("scrollOff").addEventListener("change", function() {
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
+  const top = document.querySelector("[data-top]");
   if (window.scrollY >= 100) {
     header.classList.add("active");
+    top.classList.add("active");
   } else {
     header.classList.remove("active");
+    top.classList.remove("active");
   }
 });
 
