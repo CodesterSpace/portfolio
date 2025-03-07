@@ -90,40 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-/**
- * Defilement Auto
- */
-
-let scrollInterval;
-let direction = 1; // 1 pour bas, -1 pour haut
-
-// Événement lorsque l'on active le défilement
-document.getElementById("scrollOn").addEventListener("change", function() {
-    if (this.checked) {
-      toggleNavbar(); // Simule un clic sur les togglers de la navbar
-
-        scrollInterval = setInterval(() => {
-            window.scrollBy(0, 5 * direction); // Définit la vitesse du défilement
-
-            if ((window.innerHeight + document.documentElement.scrollTop) >= document.documentElement.offsetHeight) {
-              direction = -1;
-          }
-          
-          if (document.documentElement.scrollTop <= 0) {
-              direction = 1;
-          }
-          
-        }, 20);
-    }
-});
-
-// Événement lorsque l'on désactive le défilement
-document.getElementById("scrollOff").addEventListener("change", function() {
-    clearInterval(scrollInterval);
-    toggleNavbar();
-});
-
 /**
  * HEADER
  * header active when window scroll down to 100px
