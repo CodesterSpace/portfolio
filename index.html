@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Ibrahima Diallo | Développeur Web & Mobile </title>
+  <meta name="title" content="Ibrahima Diallo | Développeur Web & Mobile">
+  <meta name="description" content=" Portfolio - Ibrahima Diallo | Développeur Web & Mobile">
+
+  <!-- Open Graph (OG) Meta Tags pour Facebook et autres réseaux sociaux -->
+  <meta property="og:title" content="Ibrahima Diallo | Développeur Web & Mobile">
+  <meta property="og:description" content="Portfolio - Ibrahima Diallo | Développeur Web & Mobile">
+  <meta property="og:image" content="https://codesterspace.github.io/portfolio/assets/images/hero2.jpeg"> <!-- Remplacez par l'URL de votre image -->
+  <meta property="og:url" content="https://codesterspace.github.io/portfolio/"> <!-- L'URL de la page que vous partagez -->
+  <meta property="og:type" content="website">
+
+  <!-- Meta pour Twitter Cards -->
+  <meta name="twitter:title" content="Ibrahima Diallo | Développeur Web & Mobile">
+  <meta name="twitter:description" content="Portfolio - Ibrahima Diallo | Développeur Web & Mobile">
+  <meta name="twitter:image" content="https://codesterspace.github.io/portfolio/assets/images/hero2.jpeg"> <!-- Remplacez par l'URL de votre image -->
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/modal-style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero2.jpeg">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo" id="logo-img">
+        <img src="./assets/images/logo.svg" width="170" height="40" alt="Pfolio home">
+      </a>
+
+      <!--Switch Mode -->
+
+      <div class="mode">
+        <ion-icon name="sunny"></ion-icon>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="switcher"></span>
+        </label>
+        <ion-icon name="moon"></ion-icon>
+      </div>
+
+      <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a data-nav-toggler href="#" class="navbar-link active">Accueil</a>
+          </li>
+
+          <li>
+            <a data-nav-toggler href="#services" class="navbar-link">Services</a>
+          </li>
+
+          <li>
+            <a data-nav-toggler href="#competences" class="navbar-link">Compétences</a>
+          </li>
+          
+          <li>
+            <a data-nav-toggler href="#portfolio" class="navbar-link">Portfolio</a>
+          </li>
+
+          <!-- <li>
+            <a href="#" class="navbar-link">Blog</a>
+          </li> -->
+
+          <li>
+            <a data-nav-toggler href="#contact" class="navbar-link">Contact</a>
+          </li>
+
+          <!-- <div class="defilement">
+            <p>Défilement automatique</p>
+            <div class="defilement-container">
+                <label>
+                    <input type="radio" name="active" id="scrollOn"> Activer
+                </label>
+                <label>
+                    <input type="radio" name="active" id="scrollOff" checked> Désactiver
+                </label>
+            </div>
+          </div> -->
+
+        </ul>
+      </nav>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Ibrahima Diallo</h1>
+
+            <p class="hero-subtitle">
+              Développeur Web & Mobile
+            </p>
+
+            <div class="hero-banner">
+              <img src="./assets/images/hero2.jpeg" width="800" height="800" alt="kane williams" class="w-100">
+            </div>
+
+            <p class="section-text">
+              Étudiant en digital, passionné par les nouvelles technologies et la communication en ligne, je possède des compétences solides en gestion de réseaux sociaux, création de contenu et optimisation numérique. 
+              J'ai de l'expérience dans la gestion de communautés et l'intégration de sites web, avec un souci de performance et de rapidité. 
+              Mon objectif est de contribuer à des projets créatifs et innovants tout en continuant à évoluer dans ce domaine dynamique.
+            </p>
+
+            <button id="cv" class="btn has-before">
+              <span class="span">Telecharger CV</span>
+
+              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section id="services" class="service" aria-labelledby="service-label">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <div>
+              <p class="section-subtitle">
+               Mes Services
+              </p>
+
+              <h2 class="h2 section-title" id="service-label">Services</h2>
+            </div>
+
+            <p class="section-text">
+              En tant que développeur web et mobile, je vous propose des solutions sur mesure pour répondre à vos besoins numériques, 
+              que ce soit pour une présence en ligne via un site web ou une application mobile. 
+              Mon expertise couvre les domaines suivants :
+            </p>
+
+          </div>
+
+          <div class="slider" data-slider>
+
+            <ul class="slider-container service-list" data-slider-container>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="desktop-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Website Design</h3>
+
+                  <span class="text-lg card-number">01</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my website design service"></a>
+
+                </div>
+              </li>
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="phone-portrait-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Dév Mobiles</h3>
+
+                  <span class="text-lg card-number">02</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my website design service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="megaphone-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Marketing Digital</h3>
+
+                  <span class="text-lg card-number">03</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my Digital Marketing service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="podium-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">SEO Marketing</h3>
+
+                  <span class="text-lg card-number">04</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my SEO Marketing service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="basket-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">eCommerce</h3>
+
+                  <span class="text-lg card-number">05</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my eCommerce service"></a>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section id="competences" class="section skills" aria-label="our skills">
+        <div class="container">
+
+          <p class="section-subtitle">Compétences</p>
+
+          <h2 class="h2 section-title">Mes Compétences principales.</h2>
+
+          <div class="skills-wrapper">
+
+            <div>
+              <p class="section-text">
+                Je mets à votre disposition une expertise approfondie dans plusieurs domaines du développement web et mobile, alliant technique, créativité et innovation pour répondre à vos besoins spécifiques.
+              </p>
+
+              <a href="mailto:ibrahima.diallo1701@gmail.com" class="btn has-before">Contact par <ion-icon name="mail-outline"></ion-icon> </a>
+          
+            </div>
+
+            <div>
+
+              <ul class="skills-list">
+
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Website Design (html, css, javascript, php)</p>
+
+                    <data class="progress-value" value="100">100%</data>
+                  </div>
+
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 100%;"></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Dev mobile (Angular.js, Framwork Ionic)</p>
+
+                    <data class="progress-value" value="100">100%</data>
+                  </div>
+
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 100%;"></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">SEO Marketing (Google Analytics)</p>
+
+                    <data class="progress-value" value="95">95%</data>
+                  </div>
+
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 95%;"></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Marketing Digital</p>
+
+                    <data class="progress-value" value="85">85%</data>
+                  </div>
+
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 85%;"></div>
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PORTFOLIO
+      -->
+
+      <section id="portfolio" class="portfolio" aria-labelledby="portfolio-label">
+
+        <div class="title-wrapper container">
+
+          <div>
+            <p class="section-subtitle" id="portfolio-label">Portfolio</p>
+
+            <h2 class="h2 section-title">Mon Portfolio</h2>
+          </div>
+
+          <p class="section-text">
+          Découvrez une sélection de mes projets récents, réalisés avec passion et expertise. Chaque projet reflète mon engagement à créer des solutions sur mesure, alliant innovation, esthétique et performance.
+          </p>
+
+        </div>
+
+        <div class="slider" data-slider>
+          <!-- Modal Overlay for dimming background -->
+          <div class="modal-overlay" id="modal-overlay"></div>
+          <ul class="slider-container">
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/calchub.webp" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                <a href="https://codesterspace.github.io/CalcHub-demo/" class="layer-link"></a>
+              </div>
+              <div class="portfolio-card-content">
+                <div class="portfolio-details">
+                  <h3 class="h3 card-title">CalcHub</h3>
+                  <p class="card-text">App Development</p>
+                </div>
+              </div>     
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/HookaPDV.png" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                <a data-modal="modal2" href="#" class="layer-link"></a>
+              </div>
+              <div class="portfolio-contenu">
+                <div class="portfolio-details">
+                <h3 class="h3 card-title">Hooka Shicha</h3>
+                <p class="card-text">Website Development</p>
+              </div>
+              <!-- Modal Content -->
+
+              <div class="modal__container" id="modal2">
+                <div class="modal__content">
+                  <div class="single-card">
+                    <div class="exit">
+                      <button class="modal-button close-btn" data-close="modal2">X</button>
+                    </div>
+                    <div class="img-area">
+                      <img src="./assets/images/HookaPDV.png" alt="">
+                    </div>
+                    
+                    <div class="info">
+                      <div class="partie">
+                        <div class="head-card">
+                          <h3 class="h3 card-title">Projet : Site de Gestion de Stock et Point de Vente !</h3>
+                          <p>📅 Durée totale du projet : 4 semaines </p>
+                          <p>🎯 Objectif : Développer une application mobile sous Ionic Angular permettant de résoudre et de factoriser des polynômes en utilisant différentes méthodes.</p>                       
+                        </div>
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌 Phase 1 : Planification et Analyse (Semaine 1)</p>
+                        <ul class="modal-list left">
+                          <li>✅ Définition des fonctionnalités principales :</li>
+                          <li>✅ Étude de la base de données MySQL et conception du schéma</li>
+                          <li>✅ Création du cahier des charges et des maquettes (Figma)</li>
+                          Livrables : Cahier des charges détaillé, schéma de la base de données, wireframes du site
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌 Phase 2 : Développement du Backend (Semaines 2)</p>
+                        <ul class="modal-list right">
+                          <li>✅ Mise en place de la base de données MySQL</li>
+                          <li>✅ Développement des modèles PHP (CRUD : Produits, Catégories, Sous-catégories,Marques)</li>
+                          <li>✅  Gestion des ventes : enregistrement et annulation</li>
+                          <li>✅ Création du système d'authentification des utilisateurs (login, logout, gestion des sessions)</li>
+                          Livrables : Base de données fonctionnelle, API PHP opérationnelle
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌 Développement du Frontend et Interface Utilisateur (Semaines 3)</p>
+                        <ul class="modal-list left">
+                          <li>✅ Mise en place de Bootstrap pour le design</li>
+                          <li>✅ Création des pages principales :</li>
+                          <li>✅ Intégration AJAX pour des requêtes dynamiques sans rechargement de page</li>
+                          Livrables : Interface utilisateur fonctionnelle avec interaction fluide
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <p class="modal-subtitle">📌  Phase 4 : Tests, Optimisation et Déploiement (Semaines 4)</p>
+                        <ul class="modal-list right">
+                          <li>✅ Tests fonctionnels et correction des bugs</li>
+                          <li>✅ Sécurisation des données (protection contre les injections SQL, validation des entrées)</li>
+                          <li>✅ Optimisation des performances (indexation MySQL, mise en cache)</li>
+                          <li>✅ Hébergement du site sur un serveur web (en Local pour l'instant)</li>
+                          Livrables : Site web en production, documentation utilisateur et technique
+                        </ul>                        
+                      </div>
+
+                      <div class="partie">
+                        <div class="footer-card">
+                          <h3 class="h3 card-title">🔍 Bilan du projet !</h3>
+                          <p>⏳ Durée totale : 4 semaines respectées </p>
+                          <p>📲 Résultat final : Un site de gestion de stock et de point de vente intuitif et performant.</p>                       
+                          <p>🚀 Améliorations possibles :</p>  
+                          <ul class="modal-list center">
+                            <li>✅ Ajouter un système de gestion des fournisseurs/li>
+                            <li>✅ Génération de rapports PDF des ventes et stocks</li>
+                            <li>✅ Implémentation d'un module de facturation</li>
+                          </ul>                      
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+                <img src="./assets/images/all-in-1.png" width="600" height="600" loading="lazy" alt="portfolio" class="img-cover">
+                <a data-modal="modal3" href="#" class="layer-link"></a>
+              </div>
+              <div class="portfolio-card-content">
+                <div class="portfolio-details">
+                  <h3 class="h3 card-title">Calc all-in-1</h3>
+                  <p class="card-text">App Development</p>
+                </div>
+              </div>
+              <!-- Modal Content -->
+
+              <div class="modal__container" id="modal3">
+                <div class="modal__content">
+                  <div class="single-card">
+                    <div class="exit">
+                      <button class="modal-button close-btn" data-close="modal3">X</button>
+                    </div>
+                    <div class="img-area">
+                      <img src="./assets/images/all-in-1.png" alt="">
+                    </div>
+                    
+                    <div class="info">
+                      <h3>Calc all-in-1 !</h3>
+                      <p>Bienvenue dans notre application permettant de calculer la moyenne d'un éleve ; Calcutrice Simple ; Calculatrice Scientifique et Calculateur Delta d'un polynome !  
+                        Ce projet, développé avec Ionic et Angular, permet de faciliter le quotidien de calcule :
+                      </p>
+                      <p class="modal-p">
+                        J'ai pas encore ajouter les details de la production, mais à bientôt.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </li>
+
+          </ul>
+
+          <!-- <div class="slider-controls">
+            <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+
+            <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+          </div> -->
+
+        </div>
+        <br> 
+
+      </section>
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <!-- <section class="section blog" aria-labelledby="blog-label">
+        <div class="container">
+
+          <p class="section-subtitle" id="blog-label">Recent Articles</p>
+
+          <h2 class="h2 section-title">Latest News</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/blog-1.jpg" width="700" height="470" loading="lazy"
+                    alt="Get Started With Tiktok Ads." class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-24">
+                    <span class="span text-lg">24</span>
+                    June 2022
+                  </time>
+
+                  <div>
+                    <h3 class="h3 card-title">Get Started With Tiktok Ads.</h3>
+
+                    <p class="card-text">
+                      Phasellus et lacus suscipit congue nis in the miss mine one miss the drana risus in tincidunt
+                      ornare.
+                    </p>
+
+                    <a href="#" class="btn has-before">
+                      <span class="span">Read more</span>
+
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/blog-2.jpg" width="700" height="470" loading="lazy"
+                    alt="UX in Ecommerce – 5 things to avoid." class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-27">
+                    <span class="span text-lg">27</span>
+                    June 2022
+                  </time>
+
+                  <div>
+                    <h3 class="h3 card-title">UX in Ecommerce – 5 things to avoid.</h3>
+
+                    <p class="card-text">
+                      Phasellus et lacus suscipit congue nis in the miss mine one miss the drana risus in tincidunt
+                      ornare.
+                    </p>
+
+                    <a href="#" class="btn has-before">
+                      <span class="span">Read more</span>
+
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+    </article>
+  </main>
+
+  <!-- Back to top -->
+   <div class="back-to-top" data-top>
+      <a href="#" aria-label="Back to top" id="back-to-top-img">
+        <img src="assets/icons/ios-arrow-round-up.svg" width="50" height="50" alt="Back to top">
+      </a>
+    </div>
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer id="contact" class="footer">
+    <div class="container">
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Reste en contact</p>
+        </li>
+
+        <li>
+          <a href="mailto:ibrahima.diallo1701@gmail.com" class="footer-link">ibrahima.diallo1701@gmail.com</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Locations</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Dakar — Sénégal</a>
+        </li>
+
+      </ul>
+
+      <ul class="social-list">
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-dribbble"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-skype"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a target="blank" href="https://www.linkedin.com/in/ibrahima-diallo-942067351/" class="social-link">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/modal-script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

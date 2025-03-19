@@ -1,0 +1,226 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+.modal__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.modal__button:hover {
+  background-color: var(--first-color-alt);
+}
+
+/* Conteneur principal du modal */
+.modal__container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--eerie-black);
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 1000;
+  visibility: hidden; /* Caché par défaut */
+  opacity: 0; /* Rend invisible */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pour afficher le modal */
+.modal__container.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Contenu du modal */
+.modal__content {
+  position: relative;
+  background-color: var(--eerie-black);
+  text-align: center;
+  max-height: 110vh;
+  max-width: 90vh;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  overflow-y: auto; /* Active le scroll vertical */
+  scrollbar-width: none; /* Firefox */
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+
+
+.modal__content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari et Edge */
+}
+
+.modal__title {
+  font-size: 1.5rem;
+
+}
+.modal__details {
+  font-size: 1.5rem;
+
+}
+
+/* Image du modal */
+.modal__image {
+  
+  width: 150px;
+  margin-bottom: .75rem;
+}
+.modal__img {
+  text-align: center;
+  width: 150px;
+  margin-bottom: .75rem;
+}
+
+/* Bouton de fermeture */
+.modal__close {
+  display: inline-flex;
+  background-color: var(--roman-silver);
+  border-radius: .25rem;
+  color: #FFF;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* Animation pour afficher le modal */
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Animation pour afficher l'overlay */
+.show-modal-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive */
+/* For small devices */
+@media screen and (min-width: 576px){
+  /* .modal__content{
+  } */
+
+  .modal__img{
+    width: 170px;
+  }
+}
+
+
+#modal-overlay {
+  position: fixed; /* Plein écran pour masquer l'arrière-plan */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* L'overlay est caché par défaut */
+  z-index: 999; /* Juste en dessous du modal */
+}
+
+.single-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 15px;
+	transition: all 0.8s ease-in-out;
+}
+
+
+.exit button {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: var(--roman-silver); /* Texte en blanc */
+  font-size: 16px; /* Ajuste la taille du texte */
+  border: 1px solid var(--roman-silver);
+  border-radius: 5px;
+}
+
+.img-area {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.img-area img {
+	width: 100%;
+	height: 50%;
+  max-height: 400px;
+/* 	object-fit: cover; */
+	transition: transform 0.3s ease;
+}
+
+.info {
+	padding: 10px;
+	text-align: center;
+	color: var(--roman-silver);
+}
+.info h3 {
+	margin: 15px 0 10px;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'Bebas Neue', sans-serif;
+}
+
+.partie{
+  padding-bottom: 30px;
+}
+
+.head-card{
+  text-align: left;
+}
+
+.left{
+  text-align: left;
+  border-left: var(--roman-silver) 1px solid;
+  padding-left: 10px;
+}
+
+.right{
+  text-align: right;
+  border-right: var(--roman-silver) 1px solid;
+  padding-right: 10px;
+}
+
+.modal-subtitle {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-700);
+  margin-block-end: 20px;
+  letter-spacing: 2px;
+}
+
+.head-card{
+  text-align: center;
+}
+
+.modal-list{
+
+}
+
+ /* Petit ecran */
+ @media (max-width: 768px) {
+  .modal__content{
+    padding-top: 25%;
+  }
+}
+
