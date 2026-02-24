@@ -761,9 +761,9 @@ input:checked + .switcher:before {
     border-radius: 12px;
   }
 
-  /* .cv-modal-body iframe {
+  .cv-modal-body iframe {
     height: 500px;
-  } */
+  }
 }
 
 @media (min-width: 768px) {
