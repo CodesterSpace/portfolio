@@ -767,14 +767,15 @@ input:checked + .switcher:before {
 }
 
 @media (min-width: 768px) {
+
+}
+
   .cv-modal-body iframe {
     width: 100%;
     height: 800px;
     border: none;
     border-radius: 8px;
   }
-}
-
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
