@@ -958,6 +958,13 @@ input:checked + .switcher:before {
   transition: var(--transition-1);
 }
 
+.back-to-top a img{ 
+  border-radius: var(--radius-circle);
+}
+
+
+
+
 .back-to-top.active {
   display: block;
 }

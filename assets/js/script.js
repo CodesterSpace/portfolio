@@ -111,18 +111,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var toggleSwitch = document.getElementById("theme-toggle");
   var root = document.documentElement; // Accès à :root
   const logoImg = document.getElementById("logo-img");
-  const BackToTopImg = document.querySelector("[back-to-top-img]");
-
+  const BackToTopImg = document.getElementById("back-to-top-img");
   
   // Vérifie si le mode sombre est activé dans le localStorage
   if (localStorage.getItem("dark-mode") === "enabled" || localStorage.getItem("dark-mode") === null) {
     toggleSwitch.checked = true;
+    logoImg.src="assets/icons/logo-white.png";  // Change l'image du bouton "Back to top" en mode clair
+    BackToTopImg.src="assets/icons/go-to-top-black.png";  // Change l'image du bouton "Back to top" en mode clair
     setDarkMode(); // Applique le mode sombre
   } else if (localStorage.getItem("dark-mode") === "disabled") {
     toggleSwitch.checked = false;
     setLightMode(); // Applique le mode clair
-    logoImg.style.filter = "invert(1)";  // Réinitialise l'inversion de couleur en mode clair
-    BackToTopImg.style.filter = "invert(1)";  // Réinitialise l'inversion de couleur en mode clair
+    logoImg.src="assets/icons/logo-black.png";  // Change l'image du bouton "Back to top" en mode clair
+    BackToTopImg.src="assets/icons/go-to-top-white.png";  // Change l'image du bouton "Back to top" en mode clair
   }
 
   // Change le thème quand le switch est activé/désactivé
@@ -130,14 +131,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (this.checked) {
       setDarkMode();
       localStorage.setItem("dark-mode", "enabled");
-      logoImg.style.filter = "invert(0)";  // Inverse l'image en mode sombre
-      BackToTopImg.style.filter = "invert(0)";  // Inverse l'image en mode sombre
+      logoImg.src="assets/icons/logo-white.png";  // Change l'image du bouton "Back to top" en mode clair
+      BackToTopImg.src="assets/icons/go-to-top-black.png";  // Change l'image du bouton "Back to top" en mode clair
       console.log('Mode sombre activé');
     } else {
       setLightMode();
       localStorage.setItem("dark-mode", "disabled");
-      logoImg.style.filter = "invert(1)";  // Inverse l'image en mode clair
-      BackToTopImg.style.filter = "invert(1)";  // Inverse l'image en mode clair
+      logoImg.src="assets/icons/logo-black.png";  // Change l'image du bouton "Back to top" en mode clair
+      BackToTopImg.src="assets/icons/go-to-top-white.png";  // Change l'image du bouton "Back to top" en mode clair
       console.log('Mode sombre désactivé');
     }
   });
