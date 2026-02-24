@@ -762,7 +762,7 @@ input:checked + .switcher:before {
   }
 
   .cv-modal-body iframe {
-    height: 70vh;
+    height: 500px;
   }
 }
 
