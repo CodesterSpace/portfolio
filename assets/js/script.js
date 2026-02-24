@@ -111,7 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var toggleSwitch = document.getElementById("theme-toggle");
   var root = document.documentElement; // Accès à :root
   const logoImg = document.getElementById("logo-img");
-  const BackToTopImg = document.getElementById("back-to-top-img");
+  const BackToTopImg = document.querySelector("[back-to-top-img]");
+
   
   // Vérifie si le mode sombre est activé dans le localStorage
   if (localStorage.getItem("dark-mode") === "enabled" || localStorage.getItem("dark-mode") === null) {
@@ -197,6 +198,17 @@ window.addEventListener("scroll", function () {
     top.classList.remove("active");
   }
 });
+
+const backToTop = document.querySelectorAll("[data-back-to-top]");
+const goToTop = function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+addEventOnElements(backToTop, "click", goToTop);
 
 const layerlinks = document.querySelectorAll(".layer-link");
 layerlinks.forEach(link => {
