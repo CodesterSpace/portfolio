@@ -46,34 +46,29 @@ if (downloadCvButton) {
   });
 }
 
-const modalDownButton = document.getElementById("modal-download-cv");
-
-if (modalDownButton) {
-  modalDownButton.addEventListener("click" , (event) => {
-      event.preventDefault();
-      // Déclenche le téléchargement du fichier
-      const link = document.createElement('a');
-      link.href = './assets/documents/Ibrahima-diallo-cv.pdf';  // Chemin vers votre fichier PDF
-      link.download = 'Ibrahima-diallo-cv.pdf';  // Nom du fichier téléchargé
-      link.click();
-  });
-}
-
 /**
  * Bouton Open CV
  */
-const togglers = document.querySelectorAll('[data-modal-toggler]');
-const modal = document.getElementById('cv-modal');
-const overlays = document.getElementById('cv-overlay');
-const body = document.body;
+const modalTogglers = document.querySelectorAll("[data-modal-toggler]");
+const openCvButton = document.getElementById("open-cv");
+const cvContainer = document.getElementById("cv-modal");
+const closeCvButton = document.getElementById("close-cv");
+const cvOverlay = document.getElementById("cv-overlay");
 
-togglers.forEach(btn => {
-  btn.addEventListener('click', () => {
-    modal.classList.toggle('show');
-    overlays.classList.toggle('show');
-    body.style.overflow = modal.classList.contains('show') ? 'hidden' : 'auto';
-  });
-});
+const toggleModal = function () {
+  console.log("Toggle CV Modal");
+    if (cvContainer.classList.contains("hide")) {
+        cvContainer.classList.remove("hide");
+        cvContainer.style.display = "flex";
+        cvOverlay.classList.add("active");
+      } else {
+        cvContainer.classList.add("hide");
+        cvContainer.style.display = "none";
+        cvOverlay.classList.remove("active");
+    }
+}
+
+addEventOnElements(modalTogglers, "click", toggleModal);
 
 /**
  * NAVBAR
@@ -198,30 +193,87 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const layerlinks = document.querySelectorAll(".layer-link");
-layerlinks.forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    // get the target's link href attribute
-    const targetId = this.getAttribute("href").substring(1);
-    if (targetId) {
-      // open the link in a new tab
-      window.open(this.getAttribute("href"), '_blank');
+
+
+/**
+ * SLIDER
+ */
+
+const sliders = document.querySelectorAll("[data-slider]");
+
+const initSlider = function (currentSlider) {
+
+  const sliderContainer = currentSlider.querySelector("[data-slider-container]");
+  const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
+  const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
+
+  let totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
+  let totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+
+  let currentSlidePos = 0;
+
+  const moveSliderItem = function () {
+    sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
+  }
+
+  /**
+   * NEXT SLIDE
+   */
+  const slideNext = function () {
+    const slideEnd = currentSlidePos >= totalSlidableItems;
+
+    if (slideEnd) {
+      currentSlidePos = 0;
+    } else {
+      currentSlidePos++;
     }
+
+    moveSliderItem();
+  }
+
+  sliderNextBtn.addEventListener("click", slideNext);
+
+  /**
+   * PREVIOUS SLIDE
+   */
+  const slidePrev = function () {
+    if (currentSlidePos <= 0) {
+      currentSlidePos = totalSlidableItems;
+    } else {
+      currentSlidePos--;
+    }
+
+    moveSliderItem();
+  }
+
+  sliderPrevBtn.addEventListener("click", slidePrev);
+
+  const dontHaveExtraItem = totalSlidableItems <= 0;
+  if (dontHaveExtraItem) {
+    sliderNextBtn.style.display = 'none';
+    sliderPrevBtn.style.display = 'none';
+  }
+
+  /**
+   * slide with [shift + mouse wheel]
+   */
+
+  currentSlider.addEventListener("wheel", function (event) {
+    if (event.shiftKey && event.deltaY > 0) slideNext();
+    if (event.shiftKey && event.deltaY < 0) slidePrev();
   });
-});
 
+  /**
+   * RESPONSIVE
+   */
 
-// const layerlinks = document.querySelectorAll(".layer-link");
-// layerlinks.forEach(link => {
-//   link.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     // get the target section id from the link's href attribute
-//     const targetId = this.getAttribute("href").substring(1);
-//     const targetSection = document.getElementById(targetId);
-//     if (targetSection) {
-//       // scroll to the target section smoothly
-//       targetSection.scrollIntoView({ behavior: "smooth" });
-//     }
-//   });
-// });
+  window.addEventListener("resize", function () {
+    totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
+    totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+
+    moveSliderItem();
+  });
+
+}
+
+for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }

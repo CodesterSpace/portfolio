@@ -46,34 +46,34 @@ if (downloadCvButton) {
   });
 }
 
-const modalDownButton = document.getElementById("modal-download-cv");
-
-if (modalDownButton) {
-  modalDownButton.addEventListener("click" , (event) => {
-      event.preventDefault();
-      // Déclenche le téléchargement du fichier
-      const link = document.createElement('a');
-      link.href = './assets/documents/Ibrahima-diallo-cv.pdf';  // Chemin vers votre fichier PDF
-      link.download = 'Ibrahima-diallo-cv.pdf';  // Nom du fichier téléchargé
-      link.click();
-  });
-}
-
 /**
  * Bouton Open CV
  */
-const togglers = document.querySelectorAll('[data-modal-toggler]');
-const modal = document.getElementById('cv-modal');
-const overlays = document.getElementById('cv-overlay');
+const modalTogglers = document.querySelectorAll("[data-modal-toggler]");
+const openCvButton = document.getElementById("open-cv");
+const cvContainer = document.getElementById("cv-modal");
+const closeCvButton = document.getElementById("close-cv");
+const cvOverlay = document.getElementById("cv-overlay");
 const body = document.body;
 
-togglers.forEach(btn => {
-  btn.addEventListener('click', () => {
-    modal.classList.toggle('show');
-    overlays.classList.toggle('show');
-    body.style.overflow = modal.classList.contains('show') ? 'hidden' : 'auto';
-  });
-});
+const toggleModal = function () {
+  const isHidden = cvContainer.classList.contains("hide");
+
+  console.log("Toggle CV Modal");
+    if (isHidden) {
+        cvContainer.classList.remove("hide");
+        cvContainer.style.display = "flex";
+        cvOverlay.classList.add("active");
+        body.style.overflow = "hidden"; // Empêche le défilement du corps lorsque le modal est ouvert
+      } else {
+        cvContainer.classList.add("hide");
+        cvContainer.style.display = "none";
+        cvOverlay.classList.remove("active");
+        body.style.overflow = ""; // Rétablit le défilement du corps lorsque le modal est fermé
+    }
+}
+
+addEventOnElements(modalTogglers, "click", toggleModal);
 
 /**
  * NAVBAR
